@@ -30,11 +30,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = "11"
+        jvmTarget = JavaVersion.VERSION_17.toString()
     }
     buildFeatures {
         compose = true
@@ -51,38 +51,35 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
-    testImplementation(libs.junit)
+    implementation(libs.compose.navigation)
+    implementation(libs.viewmodel)
+    implementation(libs.livedata)
+    implementation(libs.retrofit)
+    implementation(libs.gson)
+    implementation(libs.interceptor)
+    implementation(libs.coil)
+    implementation(libs.hilt.navigation.compose)
+    implementation(libs.hilt.android)
+    ksp(libs.hilt.compiler)
+
+    debugImplementation(libs.androidx.ui.tooling)
+    debugImplementation(libs.androidx.ui.test.manifest)
+
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(platform(libs.androidx.compose.bom))
     androidTestImplementation(libs.androidx.ui.test.junit4)
-    debugImplementation(libs.androidx.ui.tooling)
-    debugImplementation(libs.androidx.ui.test.manifest)
-
-    implementation(libs.compose.navigation)
-    implementation(libs.hilt.android)
-    ksp(libs.hilt.compiler)
-
-    implementation(libs.viewmodel)
-    implementation(libs.livedata)
-
-    implementation(libs.retrofit)
-    implementation(libs.gson)
-    implementation(libs.interceptor)
-
-    implementation(libs.coil)
-    implementation(libs.hilt.navigation.compose)
-
-
     androidTestImplementation(libs.coroutine.test)
     androidTestImplementation(libs.mockito.core)
     androidTestImplementation(libs.mockito.inline)
     androidTestImplementation(libs.mockito.kotlin)
-    //testImplementation(libs.junit.jupiter.api)
-    //testImplementation(libs.junit.jupiter.engine)
     androidTestImplementation(libs.hilt.testing)
     androidTestImplementation(libs.hilt.android)
+    androidTestImplementation(libs.hilt.testing)
+    androidTestImplementation(libs.hilt.android)
+    androidTestImplementation(libs.mockk)
 
-
-
+    testImplementation(libs.junit)
+    testImplementation(libs.coroutine.test)
+    testImplementation(libs.mockk)
 }
