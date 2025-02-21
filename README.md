@@ -10,7 +10,7 @@ It implements MVVM architecture, Retrofit for API calls, clean code architecture
 
 
 ### **App Module**
-- **LBGApp**: Initializes the app.
+- `LBGApp`: Initializes the app.
 - `MainActivity`: App entry point.
 
 ### **Core Module**
