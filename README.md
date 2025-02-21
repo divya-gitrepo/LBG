@@ -3,7 +3,7 @@
  This is a simple Android application consisting of two screens - 
 1. Product List 
 2. Product Details. 
-### It implements MVVM architecture, Retrofit for API calls, clean code architecture and multi modular approach to achieve flexibility and maintainability.
+<br/>It implements MVVM architecture, Retrofit for API calls, clean code architecture and multi modular approach to achieve flexibility and maintainability.
 
 
 ## Folder Structure
