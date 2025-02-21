@@ -21,3 +21,7 @@ dependencyResolutionManagement {
 
 rootProject.name = "LBG_Assessment"
 include(":app")
+include(":data")
+include(":core:domain")
+include(":domain")
+include(":presentation")

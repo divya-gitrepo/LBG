@@ -7,22 +7,26 @@ junitVersion = "1.2.1"
 espressoCore = "3.6.1"
 lifecycleRuntimeKtx = "2.8.7"
 activityCompose = "1.10.0"
-composeBom = "2024.04.01"
+composeBom = "2025.02.00"
 navVersion = "2.8.7"
+coroutines = "1.8.0"
 hiltVersion = "2.51.1"
 kspVersion = "2.1.0-1.0.29"
-retrofitVersion = "2.9.0"
+retrofitVersion = "2.10.0"
 interceptorVersion = "4.10.0"
 lifecycleVersion = "2.8.7"
 coilVersion = "3.1.0"
 hiltNavigationVersion = "1.2.0"
 coroutineTestVersion = "1.10.1"
-mockitoCoreVersion = "4.8.0"
-mockitoVersion = "4.5.1"
+mockitoCoreVersion = "5.2.0"
+mockitoVersion = "5.2.0"
 mockitoKotlinVersion = "4.1.0"
-hiltTestingVersion = "2.44"
-mockk = "1.12.0"
+hiltTestingVersion = "2.48.1"
+mockk = "1.13.10"
 kotlinx-coroutines-test = "1.6.0"
+appcompat = "1.7.0"
+material = "1.12.0"
+jetbrainsKotlinJvm = "2.1.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -41,24 +45,29 @@ androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-man
 androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
 compose-navigation = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navVersion" }
-hilt-android = { group = "com.google.dagger", name = "hilt-android" , version.ref = "hiltVersion"}
-hilt-compiler = { group = "com.google.dagger", name = "hilt-compiler" , version.ref = "hiltVersion"}
-retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofitVersion"}
-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "retrofitVersion"}
-interceptor = { module = "com.squareup.okhttp3:logging-interceptor", version.ref = "interceptorVersion"}
-viewmodel = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "lifecycleVersion"}
-livedata = { module = "androidx.lifecycle:lifecycle-livedata-ktx", version.ref = "lifecycleVersion"}
-coil = { module = "io.coil-kt.coil3:coil-compose", version.ref = "coilVersion"}
-hilt-navigation-compose = { module = "androidx.hilt:hilt-navigation-compose", version.ref = "hiltNavigationVersion"}
+hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "hiltVersion" }
+hilt-compiler = { group = "com.google.dagger", name = "hilt-compiler", version.ref = "hiltVersion" }
+retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofitVersion" }
+gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "retrofitVersion" }
+interceptor = { module = "com.squareup.okhttp3:logging-interceptor", version.ref = "interceptorVersion" }
+viewmodel = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "lifecycleVersion" }
+livedata = { module = "androidx.lifecycle:lifecycle-livedata-ktx", version.ref = "lifecycleVersion" }
+coil = { module = "io.coil-kt.coil3:coil-compose", version.ref = "coilVersion" }
+hilt-navigation-compose = { module = "androidx.hilt:hilt-navigation-compose", version.ref = "hiltNavigationVersion" }
 coroutine-test = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "coroutineTestVersion" }
 mockito-core = { module = "org.mockito:mockito-core", version.ref = "mockitoCoreVersion" }
 mockito-inline = { module = "org.mockito:mockito-inline", version.ref = "mockitoVersion" }
 mockito-kotlin = { module = "org.mockito.kotlin:mockito-kotlin", version.ref = "mockitoKotlinVersion" }
 hilt-testing = { module = "com.google.dagger:hilt-android-testing", version.ref = "hiltTestingVersion" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
-kotlinAndroidKsp = { id = "com.google.devtools.ksp", version.ref ="kspVersion" }
-hiltAndroid = { id = "com.google.dagger.hilt.android", version.ref ="hiltVersion" }
+kotlinAndroidKsp = { id = "com.google.devtools.ksp", version.ref = "kspVersion" }
+hiltAndroid = { id = "com.google.dagger.hilt.android", version.ref = "hiltVersion" }
+android-library = { id = "com.android.library", version.ref = "agp" }
+jetbrains-kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "jetbrainsKotlinJvm" }
